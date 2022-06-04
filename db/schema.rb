@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_03_122849) do
+ActiveRecord::Schema.define(version: 2022_06_03_172359) do
+
+  create_table "contacts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.date "date", null: false
+    t.integer "request_type_id", null: false
+    t.integer "absent_type_id", null: false
+    t.integer "in_and_out_time_id", null: false
+    t.integer "reason", null: false
+    t.string "sync_status_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_contacts_on_user_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "name", default: "", null: false
