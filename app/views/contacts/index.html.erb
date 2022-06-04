@@ -10,10 +10,41 @@
     <%# ヘッダー %>
     <%= render "shared/header" %>
 
-    <div class="p-3 mt-5 mx-auto" style="width:500px;">
+    <div class="p-3 mt-5 mx-auto" style="width:700px;">
       <div class="text-center">
         <h3>届出一覧</h3>
-        <span>（未実装）</span>
+
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>日付</th>
+              <th>ユーザー</th>
+              <th>届出</th>
+              <th>詳細</th>
+              <th>理由</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @contacts.each do |contact| %>
+              <tr>
+                <% if contact.request_type.id == 1 %>
+                  <td><%= contact.date %></td>
+                  <td><%= contact.name %></td>
+                  <td><%= contact.request_type.name %></td>
+                  <td><%= "(#{contact.absent_type.name})" %></td>
+                  <td><div style="width:150px;overflow-wrap:break-word;"><%= contact.reason %></div></td>
+                <% else %>
+                  <td><%= contact.date %></td>
+                  <td><%= contact.name %></td>
+                  <td><%= contact.request_type.name %></td>
+                  <td><%= "(#{contact.in_and_out_time.name}から)" %></td>
+                  <td><div style="width:150px;overflow-wrap:break-word;"><%= contact.reason %></div></td>
+                <% end %>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
+
       </div>
     </div>
   </div>

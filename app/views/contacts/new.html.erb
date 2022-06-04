@@ -34,7 +34,7 @@
           <%= f.label :request_type_id, RequestType.find(2).name %>
           <%= f.radio_button :request_type_id, 2 %>
           <span>　</span>
-          <%= f.collection_select :in_and_out_time_id, InAndOutTime.all, :id, :name, {}, {} %>
+          <%= f.collection_select :in_time_id, InAndOutTime.all, :id, :name, {}, {} %>
           から遅刻します。
         </div>
 
@@ -42,7 +42,7 @@
           <%= f.label :request_type_id, RequestType.find(3).name %>
           <%= f.radio_button :request_type_id, 3 %>
           <span>　</span>
-          <%= f.collection_select :in_and_out_time_id, InAndOutTime.all, :id, :name, {}, {} %>
+          <%= f.collection_select :out_time_id, InAndOutTime.all, :id, :name, {}, {} %>
           から早退します。
         </div>
 
