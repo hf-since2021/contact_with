@@ -11,4 +11,7 @@ class InAndOutTime < ActiveHash::Base
     { id: 9, name: '6時間目' },
     { id: 10, name: '終学活' }
   ]
+
+  include ActiveHash::Associations
+  has_many :contacts
 end

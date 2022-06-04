@@ -5,6 +5,9 @@ class RequestType < ActiveHash::Base
     { id: 2, name: '遅刻' },
     { id: 3, name: '早退' }
   ]
+
+  include ActiveHash::Associations
+  has_many :contacts
 end
 
 # ラジオボタンにするならActiveHashにする必要はなかったかもしれない

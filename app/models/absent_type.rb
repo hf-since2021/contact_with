@@ -5,4 +5,7 @@ class AbsentType < ActiveHash::Base
     { id: 3, name: '出席扱い' },
     { id: 4, name: '出停忌引' }
   ]
+
+  include ActiveHash::Associations
+  has_many :contacts
 end
