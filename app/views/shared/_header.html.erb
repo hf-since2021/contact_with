@@ -1,0 +1,22 @@
+<div class="bg-header d-flex justify-content-between p-3">
+  <div>
+    <%= link_to root_path do %>
+      <button type="button" class="btn btn-outline-primary">トップ</button>
+    <% end %>
+  </div>
+  <div>
+    <%= link_to contacts_path, style: "text-decoration:none;" do %>
+      <button type="button" class="btn btn-outline-secondary">届出一覧</button>
+    <% end %>
+    <%= link_to new_contact_path, style: "text-decoration:none;" do %>
+      <button type="button" class="btn btn-outline-secondary">欠席届</button>
+    <% end %>
+    <button type="button" class="btn btn-outline-secondary">ボタン①</button>
+    <button type="button" class="btn btn-outline-secondary">ボタン②</button>
+  </div>
+  <div>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <button type="button" class="btn btn-outline-success">ログアウト</button>
+    <% end %>
+  </div>
+</div>

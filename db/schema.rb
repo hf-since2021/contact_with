@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 2022_06_03_172359) do
     t.bigint "user_id", null: false
     t.date "date", null: false
     t.integer "request_type_id", null: false
-    t.integer "absent_type_id", null: false
-    t.integer "in_and_out_time_id", null: false
-    t.integer "reason", null: false
-    t.string "sync_status_id", null: false
+    t.integer "absent_type_id"
+    t.integer "in_and_out_time_id"
+    t.integer "reason"
+    t.string "sync_status_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_contacts_on_user_id"

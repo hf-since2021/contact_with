@@ -16,13 +16,14 @@
   background-attachment: fixed;
   // opacity: 0.7;
 }
+.bg-login {
+  background-color: rgba(230,230,250,.8); // lavender
+}
 .bg-content {
-  // background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,.75), rgba(255,255,255,.9), rgba(255,255,255,.9), rgba(255,255,255,.75), rgba(255,255,255,0));
-  // background-color: rgba(222, 184, 135,.8); // burlywood
-  // background-color: rgba(238, 232, 170,.8); // palegoldenrod
-  // background-color: rgba(230,230,250,.8); // lavender
-  // background-color: rgba(176,196,222,.8); // lightsteelblue
   background: linear-gradient(150deg, rgba(230,230,250,.8) 53%, rgba(143,188,143,.8));
+}
+.bg-main {
+  background-color: rgba(192,192,192,.3); // 
 }
 .bg-header {
   background-color: rgba(176,196,222,.7); // lightsteelblue
